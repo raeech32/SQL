@@ -1,0 +1,28 @@
+--Create a clothing store database
+
+CREATE TABLE Store (id INTEGER PRIMARY KEY, Item TEXT, Size TEXT, Price INTEGER, Inventory INTEGER);
+
+INSERT INTO Store VALUES (1, "Blouse", "Small", 25, 100);
+INSERT INTO Store VALUES (2, "Dress", "Small", 40, 200);
+INSERT INTO Store VALUES (3, "Jeans", "Medium", 30, 150);
+INSERT INTO Store VALUES (4, "Jacket", "Large", 55, 400);
+INSERT INTO Store VALUES (5, "Slacks", "Small", 30, 120);
+INSERT INTO Store VALUES (6, "Leggings", "Large", 15, 500);
+INSERT INTO Store VALUES (7, "Windbreaker", "Medium", 25, 190);
+INSERT INTO Store VALUES (8, "Turtleneck", "Small", 25, 300);
+INSERT INTO Store VALUES (9, "Shorts", "Large", 15, 250);
+INSERT INTO Store VALUES (10, "Skirt", "Medium", 30, 120);
+INSERT INTO Store VALUES (11, "Cardigan", "Large", 80, 500);
+INSERT INTO Store VALUES (12, "Sweater", "Medium", 30, 390);
+INSERT INTO Store VALUES (13, "Sweatshirt", "Small", 20, 280);
+INSERT INTO Store VALUES (14, "Raincoat", "Large", 40, 160);
+INSERT INTO Store VALUES (15, "Stockings", "Medium", 10, 200);
+
+--display the database ordered by price.
+SELECT * FROM Store ORDER BY Price;
+
+--What are the 3 lowest stocked items?
+SELECT item, inventory
+FROM Store 
+ORDER BY inventory ASC
+LIMIT 3;
