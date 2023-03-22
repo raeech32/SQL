@@ -4,14 +4,14 @@
 SELECT COUNT(orderid) 
 FROM BIT_DB.JanSales
 WHERE length(orderid) = 6
-AND orderid <> 'Order ID'
+AND orderid <> 'Order ID';
 
 --How many of those orders were for an iPhone?
 SELECT COUNT(orderid)
 FROM BIT_DB.JanSales
 WHERE Product = 'iPhone'
 AND length(orderid) = 6
-AND orderid <> 'Order ID'
+AND orderid <> 'Order ID';
 
 --Select the customer account numbers for all the orders that were placed in February.
 SELECT DISTINCT acctnum
